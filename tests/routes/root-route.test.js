@@ -1,4 +1,4 @@
-const build = require('../../app');
+const build = require('../../src/app');
 
 let app;
 describe('Root route', () => {
@@ -15,6 +15,6 @@ const res =  await  app.inject({
     url: '/',
 });
 expect(res.statusCode).toBe(200);
-expect(res.json()).toEqual({hello: 'anam'});
+expect(res.json()).toEqual({hello: 'world'});
 });
 })
