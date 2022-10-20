@@ -12,7 +12,7 @@ const build = (opts = {}) => {
   app.register(testRoute, {prefix: 'api/v1/test'})
 
   app.get('/', (request, reply) => {
-    reply.send({ hello: 'world' });
+    reply.send({ hello: 'world. I am done with CI/CD' });
   });
   return app;
 };
