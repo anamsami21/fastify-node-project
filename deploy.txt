@@ -1,0 +1,17 @@
+Deploy on heroku - manually
+
+step 1: -  heroku login
+
+step 2: - Login to heroku container registry and push docker image to registry
+    command:- heroku container:login
+
+step 3:- Build docker image and push to heroku container registry
+    command:- heroku container:push -a udemy-learning-fastify-course web
+
+step 4:- Run docker image on heroku
+    command:- heroku container:release -a udemy-learning-fastify-course web
+
+Deploy to heroku with github actions - CD
+
+    step 1:- heroku authorizations:create
+        result: 
