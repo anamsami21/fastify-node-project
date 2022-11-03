@@ -21,6 +21,7 @@
     "fastify": "^3.29.0",
     "fastify-plugin": "^4.2.1",
     "fastify-swagger": "^5.2.0",
+    "moment": "^2.29.4",
     "nodemon": "^2.0.20",
     "pg-promise": "^10.12.0"
   },

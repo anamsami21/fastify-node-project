@@ -1,0 +1,35 @@
+const moment = require('moment');
+const UserRepository = require('../dao/user.dao');
+
+const userService = (fastify) => {
+  const userRepository = UserRepository(fastify);
+  const getUserById = async (userId) => {
+    const user = await userRepository.getUserById(userId);
+    const userName = [user.first_name, user.middle_name, user.last_name]
+      .filter((name) => name !== '')
+      .filter((name) => name !== null)
+      .filter((name) => name !== undefined)
+      .join(' ');
+
+      console.log('===========version========', user.version)
+
+    return {
+      id: user.id,
+      userName,
+      email: user.email,
+      createdAt: moment(user.created_at).format('DD/MM/YYYY'),
+      updatedAt: moment(user.updated_at).format('DD/MM/YYYY'),
+      version: user.version,
+    };
+  };
+
+  // save user in db and return id
+  const createUser = async (user) => {
+    const userId = userRepository.saveUser(user);
+    return userId;
+  };
+
+  return { getUserById, createUser };
+};
+
+module.exports = userService;
