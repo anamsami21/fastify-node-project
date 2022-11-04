@@ -48,10 +48,10 @@ describe('user service', () => {
 
     expect(user).toEqual({
       id: 'uuid',
-      userName: 'peter middlename smith',
+      username: 'peter middlename smith',
       email: 'email',
-      createdAt: '07/08/2021',
-      updatedAt: '07/08/2021',
+      createdAt: '07-08-2021',
+      updatedAt: '07-08-2021',
       version: 'some_uuid',
     });
   });
@@ -73,10 +73,10 @@ describe('user service', () => {
 
     expect(user).toEqual({
       id: 'uuid',
-      userName: 'peter',
+      username: 'peter',
       email: 'email',
-      createdAt: '07/08/2021',
-      updatedAt: '07/08/2021',
+      createdAt: '07-08-2021',
+      updatedAt: '07-08-2021',
       version: 'some_uuid',
     });
   });

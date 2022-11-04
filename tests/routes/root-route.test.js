@@ -15,6 +15,6 @@ const res =  await  app.inject({
     url: '/',
 });
 expect(res.statusCode).toBe(200);
-expect(res.json()).toEqual({ hello: 'world. I am done with CI/CD' });
+expect(res.json()).toEqual({ hello: 'world. I am done with CI/CD for the very first time.' });
 });
 })
